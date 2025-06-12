@@ -1,0 +1,41 @@
+# Production-specific requirements for BIRCH Clustering API
+
+# FastAPI and ASGI server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+gunicorn==21.2.0
+
+# AWS S3 integration
+boto3==1.34.0
+botocore==1.34.0
+
+# Additional HTTP and async support
+httpx==0.25.2
+aiofiles==23.2.1
+
+# Monitoring and metrics
+prometheus-client==0.19.0
+psutil==5.9.6
+
+# Enhanced logging
+structlog==23.2.0
+
+# Security
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Database connections (if needed)
+asyncpg==0.29.0
+sqlalchemy[asyncio]==2.0.23
+
+# Caching
+aiocache==0.12.2
+
+# Configuration management
+pydantic-settings==2.1.0
+
+# Development and testing (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2 
