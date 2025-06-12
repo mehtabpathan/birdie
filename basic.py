@@ -14,7 +14,6 @@ from typing import Dict, List, Optional
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from sklearn.cluster import BIRCH
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -128,7 +127,7 @@ class SimpleClustering:
         best_cluster_id = self.faiss_id_to_cluster_id[best_faiss_idx]
 
         # If similarity is good enough, add to existing cluster
-        if best_similarity > 0.7:  # Simple threshold
+        if best_similarity > 0.5:  # Simple threshold
             old_centroid = self.clusters[best_cluster_id].centroid.copy()
             self.clusters[best_cluster_id].add_tweet(tweet, embedding)
 
